@@ -292,8 +292,9 @@ function openNextLink() {
 
     addLog(`Otevírám kurz ${currentIndex + 1}/${links.length}`, 'success');
 
-    // Otevře odkaz v novém okně
-    currentWindow = window.open(link, '_blank');
+    // Otevře odkaz v novém okně jako popup bez focusu
+    const windowFeatures = 'popup=yes,width=1200,height=800,left=100,top=100';
+    currentWindow = window.open(link, '_blank', windowFeatures);
 
     if (!currentWindow) {
         addLog('Nepodařilo se otevřít okno. Povol pop-up okna!', 'error');
@@ -301,9 +302,17 @@ function openNextLink() {
         return;
     }
 
-    // Vrátíme focus zpět na hlavní okno, aby nové okno nevyskočilo do popředí
+    // Vrátíme focus zpět na hlavní okno
     setTimeout(() => {
         window.focus();
+        // Pokusíme se odebrat focus z nového okna
+        try {
+            if (currentWindow && !currentWindow.closed) {
+                currentWindow.blur();
+            }
+        } catch (e) {
+            // Ignorujeme chyby cross-origin
+        }
     }, 100);
 
     // Focus nyní řeší výhradně background script rozšíření, 
