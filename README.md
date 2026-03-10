@@ -7,7 +7,7 @@
 > [!IMPORTANT]
 > **UPOZORNĚNÍ:** Tento nástroj slouží výhradně pro EDUKATIVNÍ ÚČELY a k testování automatizačních procesů v prohlížeči. Neslouží k obcházení povinných školení ani k porušování vnitřních předpisů. Použití je na vlastní zodpovědnost.
 
-Tento projekt poskytuje jednoduché rozhraní pro automatizované otevírání a správu odkazů na platformě Degreed. Automatické dokončování vzdělávacích kurzů na platformě **eu.degreed.com**.
+Tento projekt poskytuje jednoduché rozhraní pro automatizované dokončování vzdělávacích kurzů na platformě **eu.degreed.com**.
 
 ---
 
