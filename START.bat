@@ -3,9 +3,9 @@ setlocal enabledelayedexpansion
 title Degreed Automatizace
 
 @cls
-@echo ================================================================
+@echo =====================================================
 @echo                 DEGREED AUTOMATIZACE
-@echo ================================================================
+@echo =====================================================
 @echo.
 
 @echo Kontrola prohlizece...
