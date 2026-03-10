@@ -17,6 +17,15 @@
 
     // --- DEGREED AUTOMATION LOGIC ---
     if (hostname.includes('eu.degreed.com')) {
+        // Automatické zavření po úspěšném přihlášení
+        if (window.location.pathname.includes('/home/overview')) {
+            console.log('✅ Úspěšné přihlášení detekováno, zavírám tab za 2s...');
+            setTimeout(() => {
+                window.close();
+            }, 2000);
+            return;
+        }
+
         const CONFIG = {
             checkDelay: 2000,
             maxWaitForNewWindow: 10000,
