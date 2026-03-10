@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Degreed Automation Bundle",
+  "version": "1.0",
+  "description": "Bundled automation for Degreed.eu and Auto Close for SSO.",
+  "permissions": ["scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://eu.degreed.com/*",
+        "http://eu.degreed.com/*",
+        "https://login.microsoftonline.com/*",
+        "https://stso.skoda.vwgroup.com/*",
+        "https://consent.youtube.com/*",
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://youtu.be/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

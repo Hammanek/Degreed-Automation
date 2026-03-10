@@ -1,0 +1,15 @@
+# Browser and Profile data
+chromium/
+browser_profile/
+
+# Temporary files
+/tmp/
+*.log
+*.tmp
+
+# Git and OS files
+.DS_Store
+Thumbs.db
+
+# User specific links
+links.txt
