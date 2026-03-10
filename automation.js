@@ -301,6 +301,11 @@ function openNextLink() {
         return;
     }
 
+    // Vrátíme focus zpět na hlavní okno, aby nové okno nevyskočilo do popředí
+    setTimeout(() => {
+        window.focus();
+    }, 100);
+
     // Focus nyní řeší výhradně background script rozšíření, 
     // aby nedocházelo k nechtěnému otevírání z minimalizace.
 
