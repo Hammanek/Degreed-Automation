@@ -8,30 +8,10 @@ title Degreed Automatizace
 @echo ================================================================
 @echo.
 
-REM Kontrola existuje url.txt
-@if exist "url.txt" goto :links_ok
-@echo Nelezen soubor url.txt!
-@echo.
-@echo Vytvor soubor url.txt s odkazy na kurzy.
-@echo.
-@pause
-@exit /b
-
-:links_ok
-@echo off
-REM Kontrola odkazu
-@powershell -Command "& {$content = Get-Content 'url.txt' -Raw; $links = $content -split ',' | Where-Object {$_ -match 'degreed.com'}; $count = $links.Count; if ($count -eq 0) { exit 1 } else { Write-Host 'Nalezeno kurzu:' $count }}"
-@if %errorlevel% neq 0 (
-    echo Nenalezeny zadne platne odkazy v url.txt!
-    pause
-    exit /b
-)
-
-@echo.
 @echo Kontrola prohlizece...
 @echo.
 
-REM Kontrola/Stazeni prenosneho Chromia
+@REM Kontrola/Stazeni prenosneho Chromia
 @set "CHROMIUM_DIR=%~dp0chromium"
 @set "CHROMIUM_EXE="
 
@@ -68,7 +48,7 @@ REM Kontrola/Stazeni prenosneho Chromia
 
 @echo Spoustim...
 
-REM Kontrola, jestli je to první spuštění (prázdný browser_profile)
+@REM Kontrola, jestli je to první spuštění (prázdný browser_profile)
 @set "FIRST_RUN=0"
 @if not exist "%~dp0browser_profile\Default" set "FIRST_RUN=1"
 
