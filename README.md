@@ -1,5 +1,9 @@
 # 🎓 Degreed Automation
 
+<div align="center">
+  <img src="https://degreed.com/wp-content/uploads/2023/03/degreed-logo.svg" alt="Degreed Logo" width="300"/>
+</div>
+
 > [!IMPORTANT]
 > **UPOZORNĚNÍ:** Tento nástroj slouží výhradně pro EDUKATIVNÍ ÚČELY a k testování automatizačních procesů v prohlížeči. Neslouží k obcházení povinných školení ani k porušování vnitřních předpisů. Použití je na vlastní zodpovědnost.
 
@@ -36,8 +40,7 @@ Tento projekt poskytuje jednoduché rozhraní pro automatizované otevírání a
 
 ## 🌟 Vlastnosti
 
-- **Bilingvální podpora**: Plně kompatibilní s **českou i anglickou** verzí rozhraní Degreed.
-- **Auto-Close**: Automaticky zavírá přihlašovací okna Microsoftu a odkazy na **YouTube** (po 1 sekundě), aby nezůstávaly viset v prohlížeči.
+- **Jazyková podpora**: Plně kompatibilní s **českou** verzí rozhraní Degreed.
 
 ---
 

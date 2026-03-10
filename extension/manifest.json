@@ -3,7 +3,10 @@
   "name": "Degreed Automation Bundle",
   "version": "1.0",
   "description": "Bundled automation for Degreed.eu and Auto Close for SSO.",
-  "permissions": ["scripting", "tabs"],
+  "permissions": ["scripting", "tabs", "webRequest"],
+  "host_permissions": [
+    "https://lms.skoda.vwgroup.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -17,10 +20,11 @@
         "https://consent.youtube.com/*",
         "https://www.youtube.com/*",
         "https://youtube.com/*",
-        "https://youtu.be/*"
+        "https://youtu.be/*",
+        "https://lms.skoda.vwgroup.com/*"
       ],
       "js": ["content.js"],
-      "run_at": "document_end"
+      "run_at": "document_start"
     }
   ]
 }

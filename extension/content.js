@@ -8,11 +8,10 @@
         hostname.includes('stso.skoda.vwgroup.com') ||
         hostname.includes('youtube.com') ||
         hostname.includes('youtu.be') ||
+        hostname.includes('lms.skoda.vwgroup.com') ||
         hostname.includes('consent.youtube.com')) {
-        console.log("🔒 Detekováno přihlašovací okno, zavírám za 1s...");
-        setTimeout(() => {
-            window.close();
-        }, 1000);
+        console.log("🔒 Detekováno přihlašovací okno nebo LMS, zavírám okamžitě...");
+        window.close();
         return;
     }
 
@@ -82,6 +81,15 @@
                 setTimeout(() => window.close(), 1000);
                 return;
             }
+            
+            // Kontrola, jestli existuje tlačítko Dokončit
+            const completeButton = findCompleteButton();
+            if (!completeButton) {
+                console.log('❌ Tlačítko Dokončit nenalezeno, zavírám okno');
+                setTimeout(() => window.close(), 1000);
+                return;
+            }
+            
             const minutes = getContentMinutes() || 1;
             console.log(`⏰ Délka contentu: ${minutes} minut`);
             waitAndComplete(minutes);
