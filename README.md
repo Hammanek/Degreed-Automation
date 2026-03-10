@@ -1,7 +1,7 @@
 # 🎓 Degreed Automation
 
 <div align="center">
-  <img src="https://degreed.com/wp-content/uploads/2023/03/degreed-logo.svg" alt="Degreed Logo" width="300"/>
+  <img src="https://cdn.prod.website-files.com/657890a20fc7e8389faccae9/65a6d46ef71df79b504d633d_Degreed.png" alt="Degreed Logo" width="300"/>
 </div>
 
 > [!IMPORTANT]
