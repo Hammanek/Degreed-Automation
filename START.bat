@@ -56,5 +56,18 @@ if not exist "%~dp0browser_profile" mkdir "%~dp0browser_profile"
 set BROWSER_FLAGS=--load-extension="%~dp0extension" --user-data-dir="%~dp0browser_profile" --no-first-run --no-default-browser-check --disable-popup-blocking --disable-background-timer-throttling --disable-renderer-backgrounding --disable-backgrounding-occluded-windows
 
 echo Spoustim...
-start "" "%CHROMIUM_EXE%" %BROWSER_FLAGS% "%~dp0index.html"
+
+REM Kontrola, jestli je to první spuštění (prázdný browser_profile)
+set FIRST_RUN=0
+if not exist "%~dp0browser_profile\Default" set FIRST_RUN=1
+
+if %FIRST_RUN%==1 (
+    echo.
+    echo PRVNI SPUSTENI - Oteviram prihlasovaci stranku Degreed...
+    echo Po prihlaseni muzete zavryt zalozku a spustit automatizaci.
+    echo.
+    start "" "%CHROMIUM_EXE%" %BROWSER_FLAGS% "https://eu.degreed.com" "%~dp0index.html"
+) else (
+    start "" "%CHROMIUM_EXE%" %BROWSER_FLAGS% "%~dp0index.html"
+)
 exit /b
