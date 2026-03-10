@@ -34,6 +34,13 @@ Tento projekt poskytuje jednoduché rozhraní pro automatizované otevírání a
 
 ---
 
+## 🌟 Vlastnosti
+
+- **Bilingvální podpora**: Plně kompatibilní s **českou i anglickou** verzí rozhraní Degreed.
+- **Auto-Close**: Automaticky zavírá přihlašovací okna Microsoftu a odkazy na **YouTube** (po 1 sekundě), aby nezůstávaly viset v prohlížeči.
+
+---
+
 ## 🔧 Řešení problémů
 
 | Problém | Možné řešení |
