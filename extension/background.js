@@ -7,7 +7,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
 });
 
-// Zachytávání nově vytvořených tabů
+// Zachytávání nově vytvořených tabů s žádostí o certifikát
 chrome.tabs.onCreated.addListener((tab) => {
     if (tab.url && tab.url.includes('lms.skoda.vwgroup.com')) {
         console.log('🚫 Blokuji nový tab s lms.skoda.vwgroup.com:', tab.id);
